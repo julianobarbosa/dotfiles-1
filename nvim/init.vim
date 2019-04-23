@@ -1,6 +1,6 @@
 let s:my_config_dir = expand('<sfile>:p:h')
 
-for s:name in ['plugins', 'editing', 'interface', 'buffer', 'colorscheme', 'files', 'completion', 'terminal', 'git']
+for s:name in ['plugins', 'editing', 'interface', 'abbreviations', 'buffer', 'colorscheme', 'files', 'completion', 'terminal', 'git']
   execute 'source' fnameescape(s:my_config_dir.'/lib/'.s:name.'.vim')
 endfor
 
