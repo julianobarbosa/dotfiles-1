@@ -75,6 +75,11 @@ set foldmethod=marker
   command! -nargs=+ -complete=command PutOutput execute 'put =execute(' . escape(string(<q-args>), '|"') . ')'
 
   " Clipboard {{{
+  "" Copy/Paste/Cut
+    if has('unnamedplus')
+      set clipboard=unnamed,unnamedplus
+    endif
+
     " ,c is easier to type than "+ because it doesn't require pressing Shift
     noremap <leader>c "+
     " these 3 mappings are equivalent to Ctrl+C, Ctrl+V, and Ctrl+X in GUI
