@@ -14,3 +14,10 @@ alias edit="$EDITOR"
 alias e="$EDITOR"
 
 export CLICOLOR="1"
+
+# add Projects folder
+export PROJECT_HOME="$HOME/__Projects/Envs"
+
+# add PYENV
+export PYENV_ROOT="$HOME/.pyenv"
+export WORKON_HOME="$HOME/.virtualenvs"

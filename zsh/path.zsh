@@ -5,7 +5,6 @@ typeset -aU fpath manpath path
 
 if is_macos; then
   path=(
-    ~/Library/Python/*/bin
     /usr/local/opt/ruby/bin
     /usr/local/opt/file-formula/bin         # file
     /usr/local/opt/gnu-tar/libexec/gnubin   # GNU tar
@@ -29,6 +28,27 @@ if is_macos; then
     "${manpath[@]}"
   )
 fi
+
+# add PYENV to path
+path=("$PYENV_ROOT/bin" "${path[@]}")
+
+# initialize PYENV
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv root)/completions/pyenv.zsh"
+source "$PYENV_ROOT/completions/pyenv.zsh"
+
+pyenv virtualenvwrapper_lazy
+
+# add virtualenvs
+path=("$PYENV_ROOT/.versions/3.7.3/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/2.7.16/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/jupyter3/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/ipython2/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/tools3/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/tools2/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/neovim3/bin" "${path[@]}")
+path=("$PYENV_ROOT/.versions/neovim2/bin" "${path[@]}")
 
 # add Go binaries
 export GOPATH="$HOME/.go"
