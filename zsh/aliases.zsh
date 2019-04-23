@@ -42,15 +42,19 @@ alias chown='chown -v'
 alias du='du -h'
 alias df='df -h'
 
-# vim
+# vim 
 alias v='nvim $1'
 alias vi='nvim $1'
 alias vim='nvim $1'
 
-# tmux
+# tmux 
 alias ta='tmux -2 attach -t'
 alias tl='tmux -2 list-session'
 alias tn='tmux -2 new -s $USER'
 alias ts='tmux -2 new-session -s'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
+
+# DJango
+alias manage='python $VIRTUAL_ENV/../manage.py'
+
