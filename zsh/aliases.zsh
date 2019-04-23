@@ -41,3 +41,8 @@ alias chown='chown -v'
 # print file sizes in human readable format
 alias du='du -h'
 alias df='df -h'
+
+# vim
+alias v='nvim $1'
+alias vi='nvim $1'
+alias vim='nvim $1'
