@@ -58,3 +58,7 @@ alias tkss='tmux kill-session -t'
 # DJango
 alias manage='python $VIRTUAL_ENV/../manage.py'
 
+# copy and paste
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+
